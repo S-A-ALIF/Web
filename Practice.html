@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="th.webp"> <!--Titles icon-->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Hello World Example</title>
+</head>
+
+
+<body>
+    <div  align="center" class="prac">    
+        <marquee direction = "right"><h1>Web practices</h1></marquee>
+    </div>
+    
+    <a href="https://www.frnds.wapka.site" target="_blank" title="Goes to my very first site.">
+        Friends colleges
+    </a><br>
+    
+    <a href="snake_game.html">Snake game </a><br><br>
+
+    <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">
+    <img src="Images/catto.jpg" alt="Car"
+    height="180" width="200" ></a><br>
+    <!--Now the pic will lead to a link-->
+    
+    <img src="th.webp" alt="This is a panda." width="200">
+    <!--To know what alt does, inut a wrong src-->
+    <br><br><br><br>
+
+    <audio src="stromae tous les mêmes.mp3" controls> </audio><br>
+    
+    <audio controls autoplay muted loop>
+        <source src="tous les mêmes.mp3">
+    </audio><br><br><br><br>
+    
+    <video src="meme.mp4" controls height="250" width="200" autoplay muted loop></video>
+    <!--We can use video as a link.See the img before line 26-->
+    <br><br><br><br>
+
+    <p >This is a normal text.</p>
+    <p>This is a <bold>Bold</bold> text.</p>
+    <p>This is a <i>Italic</i> text.</p>
+    <p>This is a <u>Underlined</u> text.</p>
+    <p>This is a <del>Deleted</del> text.</p>
+    <p>This is a <sub>Subscripted</sub> text.</p>
+    <p>This is a <sup>Superscripted</sup> text.</p>
+    <p>This is a <big>Big</big> text.</p>
+    <p>This is a <small>Small</small> text.</p>
+    <p>This is a <tt>Monospaced</tt> text.</p>
+    <p>This is a <mark style="background-color: lightgreen;">Marked</mark> text.</p>
+    <br><br>
+
+    <!--Span is used for styling inline elements while div is used for a block of elements-->
+    <p><span style="background-color: cyan;">This text is inside a span tag</span></p>
+    <p><div style="background-color: blueviolet;">This is text inside a div tag</div></p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <span style="background-color: cyan;">In earum voluptatum, sit ipsum fugit illum iste molestiae distinctio, aliquam, perferendis mollitia delectus nemo eos. Consequuntur, odit. Quisquam quia esse numquam.</span></p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <div style="background-color: blueviolet;">In earum voluptatum, sit ipsum fugit illum iste molestiae distinctio, aliquam, perferendis mollitia delectus nemo eos. Consequuntur, odit. Quisquam quia esse numquam.</div></p>
+    <br>
+
+    <!--Unordered list-->
+    <h4>Groceries</h4>
+    <ul>
+        <li>milk</li>
+        <li>coffee supplies</li>
+        <ul>
+            <li>coffee beans</li>
+            <li>sugar</li>
+        </ul>
+    </ul>
+    
+    <!--Ordered list-->
+    <h4>To do list</h4>
+    <ol>
+        <li>wake up</li>
+        <li>eat</li>
+        <ol>
+            <li>coffee beans</li>
+            <li>sugar</li>
+        </ol>
+    </ol>
+    
+    <!--Description list-->
+    <h4>Definition</h4>
+    <div style="background-image: url(Images/catto.jpg); background-position: center; color: white;
+        background-repeat: no-repeat; background-size: cover; border: 2px solid; padding: 20px;">
+        <dl>
+        <dt>Dragon</dt>
+        <dd><b>mythical </b>  beast with wings.</dd>
+        <dt> hi there</dt>
+        <dt>Cat</dt>
+        <dd>Biggest mathafaka on the planet earth.</dd>
+    </dl></div>
+    <br><br>
+
+
+    <h3 style="background-color: rgb(34, 229, 66); ">Prices</h3>
+    <table border="3" style="background-color: black;">
+        <tr align="center" style="background-color: lightblue;">
+            <th width="100">Phone</th>
+            <th>Laptop</th>
+            <th>Life</th>
+        </tr>
+        <tr style="background-color: aliceblue;">
+            <th>15k</th>
+            <th>60k</th>
+            <th>0tk</th>
+        </tr>
+    </table>
+    <br><br><br>
+
+    <a href="https://www.frnds.wapka.site">
+        <button style="background-color: blueviolet; color: aqua; border-radius: 10px;" >
+            Click here
+        </button>
+    </a><br><br>
+    
+    <button onclick="change_it()" style="background-color: blueviolet; color: aqua; border-radius: 10px;">
+        Change text
+    </button>
+    <p id="ola">ola amigos</p>
+    <script>
+        function change_it(){
+            document.getElementById("ola").innerHTML = "sayonara senoire";
+        }
+    </script>
+
+
+
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        <label for="username">Username: </label>
+        <input placeholder="Enter your username" type="text" id="username" required style="border-radius: 5px;">
+        <br>
+        
+        <label for="email">Email: </label>
+        <input placeholder="Enter your email" type="email" id="email" required style="border-radius: 5px;">
+        <br>
+        
+        <label for="password">Password : </label>
+        <input placeholder="Enter your password" type="password"  id="password" style="border-radius: 5px  minlength=8 maxlength=32" required>
+        <br
+        
+        <label for="phone">Phone: </label>
+        <input placeholder="Enter your phone number" type="tel" id="phone" required style="border-radius: 5px" pattern="[0-9]{11}">
+        <br>
+        
+        <label for="bday">Birth date:</label>
+        <input placeholder="Enter your birth-date" type="date" id="bday" required style="border-radius: 5px;">
+        <br>
+        
+        <label for="quantity">Quantity: </label>
+        <input placeholder="Enter quantity" type="number" id="quantity" min="0" max="99" value="1" required style="border-radius: 5px;">
+        <br>
+        
+        <label for="select">Are you a robot: </label>
+        <label for="select">Yes</label>
+        <input type="radio" name="captcha" id="select">
+        <label for="select">No</label>
+        <input type="radio" name="captcha" id="select"><br>
+        
+        <label for="payment">Choose payment method:</label>
+        <select name="" id="">
+            <option value="visa">visa</option>
+            <option value="mastercard">mastercard</option>
+            <option value="crypto">crypto</option>
+        </select><br>
+        
+        <label for="file">File:</label>
+        <input type="file" id="file"><br>
+        
+        <label for="subscribe">Subscribe:</label>
+        <input type="checkbox" id="subscribe"><br>
+        
+        <label for="comment" style="float: left;">Comment:</label>
+        <textarea id="comment" rows="10" cols="40" style="border-radius: 10px;"></textarea><br>
+        
+        <input type="reset" style="background-color: aquamarine; border: none;">
+        <input type="submit" style="background-color: aquamarine;">
+    </form>
+    <br><br><br>
+
+
+    <header style="background-color: rgb(60, 12, 71);">
+        <div style="color: rgb(68, 44, 189)">
+        <h1 >Welcome to my page.</h1>
+        <a href="">Home</a>
+        <a href="">About us</a>
+        <a href="">Products</a>
+        <a href="">Helpline</a>
+        </div>
+    </header>
+    <br><br>
+    
+    <main>
+        <h3>Wanna see a meme?</h3>
+        <video src="meme.mp4" controls width="250"></video>
+    <p>Your are Welcome</p>
+    </main>
+    <br><br>
+    
+    <footer style="background-color: aquamarine; color: red">
+        <hr>
+        <p>Page copied by S.A.ALIF</p>
+        &copy; copyright not reserved <br>
+        <a href="mailto:soroarazmiralif@gmail.com">Email me</a>
+    </footer>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
