@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
+    
     <style>
         svg {
             border: 1px solid black;
@@ -11,16 +12,20 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Snake Game</h1>
     <svg id="gameBoard" width="400" height="400"></svg>
+    
     <script>
         const SVG_NS = "http://www.w3.org/2000/svg";
         const CELL_SIZE = 20;
         const BOARD_SIZE = 20;
         const snake = [{ x: 10, y: 10 }];
         let direction = { x: 1, y: 0 };
-        let food = { x: Math.floor(Math.random() * BOARD_SIZE), y: Math.floor(Math.random() * BOARD_SIZE) };
+        let food = {x: Math.floor(Math.random() * BOARD_SIZE), 
+                    y: Math.floor(Math.random() * BOARD_SIZE)};
+        
         function draw() {
             const svg = document.getElementById("gameBoard");
             svg.innerHTML = '';
@@ -29,6 +34,7 @@
                 drawCell(segment.x, segment.y, "black", svg);
             });
         }
+        
         function drawCell(x, y, color, svg) {
             const cell = document.createElementNS(SVG_NS, "rect");
             cell.setAttributeNS(null, "x", x * CELL_SIZE);
@@ -38,6 +44,7 @@
             cell.setAttributeNS(null, "fill", color);
             svg.appendChild(cell);
         }
+        
         function move() {
             const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
             snake.unshift(head);
@@ -52,12 +59,15 @@
             }
             draw();
         }
+        
         function generateFood() {
             food = { x: Math.floor(Math.random() * BOARD_SIZE), y: Math.floor(Math.random() * BOARD_SIZE) };
         }
+        
         function collision() {
             return snake.slice(1).some(segment => segment.x === snake[0].x && segment.y === snake[0].y);
         }
+        
         document.addEventListener("keydown", event => {
             switch (event.key) {
                 case "ArrowUp":
@@ -82,6 +92,7 @@
                     break;
             }
         });
+        
         const gameInterval = setInterval(move, 150);
     </script>
 </body>
